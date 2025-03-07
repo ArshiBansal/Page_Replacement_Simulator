@@ -1,103 +1,64 @@
-# 📊 Interactive Page Replacement Algorithm Simulator
-
-## 🚀 About the Project
-This *Python GUI application* implements three page replacement algorithms with dynamic visualizations:
-- *FIFO (First In First Out)*
-- *LRU (Least Recently Used)*
-- *Optimal Page Replacement*
-
-Experience real-time simulations, compare algorithms, and visualize page faults through interactive charts!
-
----
-
-## ✨ Key Features
-✅ *Interactive GUI* built with Tkinter  
-✅ *Real-time simulation* of FIFO, LRU, and Optimal algorithms  
-✅ *Side-by-side algorithm comparison* with bar charts  
-✅ *Animated step-by-step visualization* of frame changes  
-✅ *Fault-over-time tracking* for all algorithms  
-✅ Detailed *step-by-step execution traces*  
-✅ Responsive design with *clean visual aesthetics*
-
----
-
-## 🛠️ Installation & Usage
-
-### 1️⃣ Clone the Repository
+#📟 Page Replacement Algorithm Simulator
+Python 
+This Python-powered tool uses Tkinter and Matplotlib to make operating system concepts pop. Simulate and compare FIFO, LRU, and Optimal algorithms with dazzling visualizations and real-time stats. 🚀  
+#✨ Features
+##🧠 Algorithms: Explore FIFO, LRU, and Optimal page replacement strategies.  
+##🖼️ Interactive GUI: Input page strings and frame sizes effortlessly with Tkinter.  
+##📊 Visualizations:  
+Frame states and fault/hit timelines in real-time.  
+Side-by-side comparison of all algorithms with vibrant charts.
+##📈 Metrics: Instant page faults and hit ratios.  
+##🛠️ Debug Mode: Optional logs for a peek behind the scenes.
+#📸 Screenshots
+![Screenshot 2025-03-07 171526](https://github.com/user-attachments/assets/13adb948-ecaa-4178-99e3-53cb075032bd)
+![Screenshot 2025-03-07 171607](https://github.com/user-attachments/assets/c7eafce5-65d0-41a7-83d0-6c957480d82e)
+![Screenshot 2025-03-07 171632](https://github.com/user-attachments/assets/4263f18c-2f26-49da-bc32-53719293252a)
+![Screenshot 2025-03-07 171652](https://github.com/user-attachments/assets/0335f1b2-18a0-40aa-847b-c7988ded37a0)
+🌐 Flowcharts
+![WhatsApp Image 2025-03-07 at 17 04 13](https://github.com/user-attachments/assets/72aa9645-6758-4c86-b3ff-1ff168b46619)
+#🛠️ Prerequisites
+🐍 Python 3.x  
+##📦 Libraries:  
+tkinter (bundled with Python)  
+matplotlib  
+numpy
+🚀 Installation
+Clone the Repo:  
 bash
-git clone https://github.com/mansityagi01/PageReplacementSimulator.git
-cd PageReplacementSimulator
-
-
-### 2️⃣ Install Python Dependencies
+git clone https://github.com/yourusername/page-replacement-simulator.git  
+cd page-replacement-simulator  
+Install Dependencies:  
 bash
-pip install matplotlib
-
-
-### 3️⃣ Run the Application
+pip install matplotlib numpy  
+Launch the Simulator:  
 bash
-python3 simulator_gui.py  # Linux/macOS
-python simulator_gui.py   # Windows
-
-
----
-
-## 🖥️ GUI Walkthrough
-![GUI Demo](https://via.placeholder.com/800x500.png?text=GUI+Demo+with+Algorithms+Comparison)
-
-### 🎮 Interface Components:
-1. *Input Section*: 
-   - Page reference string (e.g., 1 2 3 4 1 2)
-   - Number of frames selector
-   - Algorithm dropdown (FIFO/LRU/Optimal)
-
-2. *Control Buttons*:
-   - 🟢 *Simulate*: Run selected algorithm
-   - 🔵 *Compare All*: Generate comparison chart
-   - 🔴 *Clear*: Reset all inputs
-
-3. *Output Section*:
-   - 📜 *Step-by-step execution log*
-   - 📈 *Live animation* of frame changes
-   - 📊 *Comparative bar charts* of page faults
-
----
-
-## 📊 Visualization Samples
-
-### 1️⃣ Algorithm Comparison Chart
-![Comparison Chart](https://via.placeholder.com/600x300.png?text=FIFO+vs+LRU+vs+Optimal+Faults+Comparison)
-
-### 2️⃣ Real-time Frame Animation
-![Frame Animation](https://via.placeholder.com/600x200.png?text=Animated+Frame+Updates+Per+Step)
-
-### 3️⃣ Fault Timeline Analysis
-![Fault Timeline](https://via.placeholder.com/600x200.png?text=Fault+Occurrence+Over+Time)
-
----
-
-## 🧠 Technical Implementation
-### Core Components:
-- *PageReplacementSimulator Class*: Manages GUI state and simulations
-- *Algorithm Implementations*:
-  python
-  def fifo(self, page_string, frame_size):
-      # FIFO implementation logic
-      
-  def lru(self, page_string, frame_size):
-      # LRU implementation using recent list
-      
-  def optimal(self, page_string, frame_size):
-      # Optimal implementation with future lookup
-  
-- *Matplotlib Integration*:
-  - Dynamic chart updates using FuncAnimation
-  - Dual-axis plots for comparison and trend analysis
-
----
-
-
-## 👩💻 Author-  
-*Arshi Bansal  
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?logo=github)](https://github.com/ArshiBansal)  
-💡 *Pro Tip*: Use prime number sequences (e.g., 2 3 5 7 11) for interesting fault patterns!
+python page_replacement_simulator.py  
+🎮 How to Use
+Start the App: Run the script to launch the GUI. 🔥  
+Enter Inputs:  
+Page String: Space-separated list (e.g., 7 0 1 2 0 3).  
+Frames: Number of frames (e.g., 3).  
+Algorithm: Choose FIFO, LRU, or Optimal. 🎯
+Run It:  
+Simulate: Click to run one algorithm. 📉  
+Compare All: See all three in action with one click! ⚡  
+Reset: Clear everything to start over. 🧹
+🗂️ Code Breakdown
+page_replacement_simulator.py:  
+✨ __init__: Crafts the sleek GUI.  
+🚀 simulate: Powers a single algorithm run.  
+⚖️ compare_all: Battles all algorithms head-to-head.  
+🧩 fifo, lru, optimal: The algorithmic brains.  
+📊 plot_simulation: Creates the stunning visuals.
+#🌟 Example
+Input:  
+Page String: 7 0 1 2 0 3 0 4 2 1 0 3  
+Frames: 3  
+Algorithm: FIFO
+Output:  
+Step-by-step breakdown in the text box. 📜  
+Faults and hit ratio stats. 📊  
+Eye-catching plots of frame states and faults over time. 🎨
+🙌 Acknowledgments
+Built with ❤️ using Tkinter.  
+Visuals powered by Matplotlib.  
